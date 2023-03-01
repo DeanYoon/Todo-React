@@ -6,11 +6,11 @@ import ToDo from "./ToDo";
 
 function ToDoList() {
   const toDos = useRecoilValue(toDoSelector);
-  const [rawToDos, _] = useRecoilState(toDoState);
+  // const [rawToDos, _] = useRecoilState(toDoState);
   const [category, setCategory] = useRecoilState(categoryState);
-  useEffect(() => {
-    localStorage.setItem("TODOS_KEY", JSON.stringify(rawToDos));
-  });
+  // useEffect(() => {
+  //   localStorage.setItem("TODOS_KEY", JSON.stringify(rawToDos));
+  // });
   const onInput = (event: React.FormEvent<HTMLSelectElement>) => {
     setCategory(event.currentTarget.value as any);
   };
